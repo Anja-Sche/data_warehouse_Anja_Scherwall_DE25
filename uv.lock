@@ -349,6 +349,7 @@ dependencies = [
     { name = "dlt", extra = ["parquet", "snowflake"] },
     { name = "ipykernel" },
     { name = "pandas" },
+    { name = "requests" },
 ]
 
 [package.metadata]
@@ -356,6 +357,7 @@ requires-dist = [
     { name = "dlt", extras = ["parquet", "snowflake"], specifier = ">=1.30.0" },
     { name = "ipykernel", specifier = ">=7.3.0" },
     { name = "pandas", specifier = ">=3.0.5" },
+    { name = "requests", specifier = ">=2.34.2" },
 ]
 
 [[package]]
