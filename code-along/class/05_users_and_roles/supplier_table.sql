@@ -1,0 +1,14 @@
+SELECT current_role();
+
+USE ROLE SECURITYADMIN;
+
+GRANT ROLE ice_cream_writer TO ROLE SYSADMIN;
+
+USE ROLE SYSADMIN;
+
+CREATE TABLE IF NOT EXISTS supplier(
+    supplier_id INT AUTOINCREMENT,
+    adress VARCHAR(255)
+);
+
+DROP TABLE supplier;
