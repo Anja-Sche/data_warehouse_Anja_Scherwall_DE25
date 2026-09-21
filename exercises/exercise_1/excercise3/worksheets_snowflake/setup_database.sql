@@ -1,0 +1,14 @@
+USE ROLE SYSADMIN;
+
+CREATE WAREHOUSE IF NOT EXISTS parking_wh
+WITH
+WAREHOUSE_SIZE = 'XSMALL'
+AUTO_SUSPEND = 60
+AUTO_RESUME = TRUE
+INITIALLY_SUSPENDED = TRUE
+COMMENT = 'Warehouse for extract and load parking information in Stockholm';
+
+CREATE DATABASE IF NOT EXISTS parking;
+
+
+CREATE SCHEMA IF NOT EXISTS parking.staging;
