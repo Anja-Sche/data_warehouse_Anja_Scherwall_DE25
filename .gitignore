@@ -223,3 +223,9 @@ __marimo__/
 
 
 setup_user.sql
+
+# dbt
+target/
+dbt_packages/
+logs/
+.env
