@@ -4,11 +4,10 @@ select
     {{ dbt_utils.generate_surrogate_key(['id']) }} as job_details_id,
     headline,
     description,
-    description_html_formatted,
-    employment_type,
-    duration,
+    description_html,
+    coalesce(duration, 'ej angiven') as duration,
     salary_type,
+    coalesce(working_hours_type, 'ej specificerad') as working_hours_type, 
     scope_of_work_min,
     scope_of_work_max
 from src_job_details
-group by
